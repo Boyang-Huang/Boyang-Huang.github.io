@@ -41,7 +41,11 @@
                 <div class="col-lg-9 col-md-8">
                     <h1>Boyang Huang</h1>
                     <p>
-                        Hi! I am a second-year master's student in the <a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering</a> department at the <a href="https://ucsd.edu/" target="_blank">University of California San Diego</a>, where I'm very fortunate to work with Professor <a href="https://cseweb.ucsd.edu/~russell/" target="_blank">Russell Impagliazzo</a> and <a href="https://barnasaha.net/" target="_blank">Barna Saha</a>. My research interest is in computational complexity theory and algorithm design, but I'm also braodly interested in theoretical computer science and mathematics. Prior to UCSD, I received undergraduate degrees in computer science and honors mathematics from the <a href="https://umich.edu/" target="_blank">University of
+                        Hi! I am a second-year master's student in the <a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering</a> department at the <a href="https://ucsd.edu/" target="_blank">University of California San Diego</a>, where I'm very fortunate to work with Professor <a href="https://cseweb.ucsd.edu/~russell/" target="_blank">Russell Impagliazzo</a> and <a href="https://barnasaha.net/" target="_blank">Barna Saha</a>. My research interest is in computational complexity theory and algorithm design, but I'm also braodly interested in theoretical computer science and mathematics.
+                    </p>
+                    <p>
+                        Prior to UCSD, I received undergraduate degrees in computer science and honors mathematics from the <a
+                        href="https://umich.edu/" target="_blank">University of
                         Michigan Ann Arbor</a>.
                     </p>
                     <p>
@@ -53,7 +57,7 @@
                     </p>
                 </div>
             </div>
-            <div class="row">
+            <!--<div class="row">
                 <div class="col">
                     <h2>Recent News</h2>
                     <ul>
@@ -65,37 +69,44 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div>-->
             <hr>
             <div class="row" id="publications">
                 <div class="col">
                     <h2>Publications</h2>
+                    <p>All co-authors are listed in alphabetical order.</p>
                     <ul class="pl">
                         <li>
-                            <a href="papers/dasigi+liu+marasovic+smith+gardner.emnlp2019.pdf" target="_blank">
-                                <b>Quoref: A Reading Comprehension Dataset with Questions Requiring Coreferential Reasoning</b>
+                            <a href="https://arxiv.org/abs/2407.19102" target="_blank">
+                                <b>The Computational Complexity of Factored Graphs</b>
                             </a>
                             <br/>
-                            <a href="http://www.cs.cmu.edu/~pdasigi/" target="_blank">Pradeep Dasigi</a>,
-                            <b>Nelson F. Liu</b>,
-                            <a href="https://amarasovic.github.io/" target="_blank">Ana Marasović</a>,
-                            <a href="https://homes.cs.washington.edu/~nasmith/" target="_blank">Noah A. Smith</a>,
-                            and <a href="https://matt-gardner.github.io/" target="_blank">Matt Gardner</a>.
+                            with <a href="javascript:;" target="_blank">Shreya Gupta</a>,
+                            <a href="https://cseweb.ucsd.edu/~russell/" target="_blank">Russell Impagliazzo</a>,
+                            <a href="javascript:;" target="_blank">Stanley Woo</a>,
+                            and <a href="https://czye17.github.io/" target="_blank">Chris Ye</a>.
                             <br/>
-                            In <a href="https://www.emnlp-ijcnlp2019.org" target="_blank">
+                            To appear in the <a href="http://itcs-conf.org/" target="_blank">
                                 <b>
-                                    Conference on Empirical Methods in Natural Language Processing &
-                                    International Joint Conference on Natural Language Processing
-                                    (EMNLP-IJCNLP)</b></a>, 2019.
+                                    16th Innovations in Theoretical Computer Science (ITCS) conference</b></a>, 2025.
                             <br/>
-                            [<a href="papers/dasigi+liu+marasovic+smith+gardner.emnlp2019.bib" target="_blank">bib</a>]
-                            [<a href="#" onclick="$('#dasigi_liu_marasovic_smith_gardner_emnlp2019_abstract').toggle();return false;">abstract</a>]
-                            [<a href="papers/dasigi+liu+marasovic+smith+gardner.emnlp2019.poster.pdf" target="_blank">poster</a>]
-                            [<a href="https://quoref-dataset.s3-us-west-2.amazonaws.com/train_and_dev/quoref-train-dev-v0.1.zip" target="_blank">dataset</a>]
-                            [<a href="https://leaderboard.allenai.org/quoref" target="_blank">leaderboard</a>]
-                            <div id="dasigi_liu_marasovic_smith_gardner_emnlp2019_abstract" class="abstract" style="display:none;">
+                            [<a href="#" onclick="$('#computational-complexity-of-factored-graphs-abstract').toggle();return false;">abstract</a>]
+                            <div id="computational-complexity-of-factored-graphs-abstract" class="abstract" style="display:none;">
                                 <p>
-                                    abstract
+                                While graphs and abstract data structures can be large and complex, practical instances are often regular or highly
+                                structured. If the instance has sufficient structure, we might hope to compress the object into a more succinct
+                                representation. An efficient algorithm (with respect to the compressed input size) could then lead to more efficient
+                                computations than algorithms taking the explicit, uncompressed object as input. This leads to a natural question: when
+                                does knowing the input instance has a more succinct representation make computation easier?
+                                </p>
+                                <p>
+                                We initiate the study of the computational complexity of problems on factored graphs: graphs that are given as a formula
+                                of products and unions on smaller graphs. For any graph problem, we define a parameterized version that takes factored
+                                graphs as input, parameterized by the number of smaller graphs used to construct the factored graph. In this setting, we
+                                characterize the parameterized complexity of several natural graph problems, exhibiting a variety of complexities. We
+                                show that a decision version of lexicographically first maximal independent set is unconditionally XP-complete, and
+                                therefore not fixed parameter tractable (FPT). On the other hand, we show that clique counting is FPT. Finally, we show
+                                that reachability is FPT if and only if <b>NL</b> is in some fixed polynomial time.
                                 </p>
                             </div>
                         </li>
