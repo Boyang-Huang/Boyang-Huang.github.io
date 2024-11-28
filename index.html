@@ -11,6 +11,7 @@
             ga('create', 'UA-51640218-1', 'auto');
             ga('send', 'pageview');
         </script>-->
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
         <title>Boyang Huang</title>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
@@ -71,15 +72,13 @@
                 </div>
             </div>-->
             <hr>
-            <div class="row" id="publications">
+            <div class="row" id="research">
                 <div class="col">
-                    <h2>Publications</h2>
+                    <h2>Research</h2>
                     <p>All co-authors are listed in alphabetical order.</p>
                     <ul class="pl">
                         <li>
-                            <a href="https://arxiv.org/abs/2407.19102" target="_blank">
-                                <b>The Computational Complexity of Factored Graphs</b>
-                            </a>
+                            <b>The Computational Complexity of Factored Graphs</b>
                             <br/>
                             with <a href>Shreya Gupta</a>,
                             <a href="https://cseweb.ucsd.edu/~russell/" target="_blank">Russell Impagliazzo</a>,
@@ -87,10 +86,10 @@
                             and <a href="https://czye17.github.io/" target="_blank">Chris Ye</a>.
                             <br/>
                             To appear in the <a href="http://itcs-conf.org/" target="_blank">
-                                <b>
-                                    16th Innovations in Theoretical Computer Science (ITCS) conference</b></a>, 2025.
+                                <b>16th Innovations in Theoretical Computer Science (ITCS) conference</b></a>, 2025.
                             <br/>
                             [<a href="#" onclick="$('#computational-complexity-of-factored-graphs-abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://arxiv.org/abs/2407.19102" target="_blank">arXiv</a>]
                             <div id="computational-complexity-of-factored-graphs-abstract" class="abstract" style="display:none;">
                                 <p>
                                 While graphs and abstract data structures can be large and complex, practical instances are often regular or highly
@@ -102,12 +101,45 @@
                                 <p>
                                 We initiate the study of the computational complexity of problems on factored graphs: graphs that are given as a formula
                                 of products and unions on smaller graphs. For any graph problem, we define a parameterized version that takes factored
-                                graphs as input, parameterized by the number of smaller graphs used to construct the factored graph. In this setting, we
-                                characterize the parameterized complexity of several natural graph problems, exhibiting a variety of complexities. We
-                                show that a decision version of lexicographically first maximal independent set is unconditionally XP-complete, and
-                                therefore not fixed parameter tractable (FPT). On the other hand, we show that clique counting is FPT. Finally, we show
-                                that reachability is FPT if and only if <b>NL</b> is in some fixed polynomial time.
+                                graphs as input, parameterized by the number of (smaller) ordinary graphs used to construct the factored graph.
+                                In this setting, we characterize the parameterized complexity of several natural graph problems, exhibiting a variety of
+                                complexities.
+                                We show that a decision version of lexicographically first maximal independent set is <b>XP</b>-complete, and
+                                therefore <i>unconditionally</i> not fixed-parameter tractable (<b>FPT</b>). On the other hand, we show that clique
+                                counting is <b>FPT</b>. Finally, we show that reachability is <b>XNL</b>-complete. Moreover, <b>XNL</b> is
+                                contained in <b>FPT</b> if and only if <b>NL</b> is contained in some fixed polynomial time.
                                 </p>
+                            </div>
+                        </li>
+                        <li>
+                            <b>The Greedy Coin Change Problem</b>
+                            <br />
+                            with <a href>Shreya Gupta</a> and
+                            <a href="https://cseweb.ucsd.edu/~russell/" target="_blank">Russell Impagliazzo</a>.
+                            <br />
+                            [<a href="#"
+                                onclick="$('#greedy-coin-change-abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://arxiv.org/abs/2411.18137" target="_blank">arXiv</a>]
+                            <div id="greedy-coin-change-abstract" class="abstract" style="display:none;">
+                                <p>
+                                The <i>Coin Change</i> problem, also known as the Change-Making problem, is a well-studied combinatorial optimization
+                                problem, which involves minimizing the number of coins needed to make a specific change amount using a given set of coin
+                                denominations.
+                                A natural and intuitive approach to this problem is the greedy algorithm.
+                                While the greedy algorithm is not universally optimal for all sets of coin denominations, it yields optimal solutions
+                                under most real-world coin systems currently in use, making it an efficient heuristic with broad practical
+                                applicability.
+                                Researchers have been studying ways to determine whether a given coin system guarantees optimal solutions under the
+                                greedy approach, but surprisingly little attention has been given to understanding the general computational behavior of
+                                the greedy algorithm applied to the coin change problem.
+                                </p>
+                                <p>
+                                To address this gap, we introduce the <i>Greedy Coin Change</i> problem and formalize its decision version: given a
+                                target amount $W$ and a set of denominations $C$, determine whether a specific coin is included in the greedy
+                                solution.
+                                We prove that this problem is <b>P</b>-complete under log-space reductions, which implies it is unlikely to be
+                                efficiently parallelizable or solvable in limited space.
+                                </p>   
                             </div>
                         </li>
                     </ul>
