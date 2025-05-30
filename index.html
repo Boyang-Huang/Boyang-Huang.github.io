@@ -93,24 +93,23 @@
                                     quadratic time complexity in context length $n$. Alman and Song [NeurIPS 2023] showed that when the head dimension \(d =
                                     \Theta(\log n)\), subquadratic Attention is possible if and only if the inputs have small entries bounded by \(B =
                                     o(\sqrt{\log n})\) in absolute values, under the Strong Exponential Time Hypothesis (\(\mathsf{SETH}\)). Equivalently,
-                                    subquadratic Attention is possible if and only if the softmax is applied with high temperature for $d=\Theta(\log n)$.
-                                    Running times of these algorithms depend exponentially on $B$ and thus they do not lead to even a polynomial-time
-                                    algorithm outside the specific range of $B$.
+                                    subquadratic Attention is possible if and only if the softmax is applied with high temperature for \(d=\Theta(\log n)\).
+                                    Running times of these algorithms depend exponentially on \(B\) and thus they do not lead to even a polynomial-time
+                                    algorithm outside the specific range of \(B\).
                                 </p>
                                 <p>
                                     This naturally leads to the question: when can Attention be computed efficiently without strong assumptions on
-                                    temperature? Are there fast attention algorithms that scale polylogarithmically with entry size $B$? In this work, we
+                                    temperature? Are there fast attention algorithms that scale polylogarithmically with entry size \(B\)? In this work, we
                                     resolve this question and characterize when fast Attention for arbitrary temperatures is possible. First, for all
-                                    constant $d = O(1)$, we give the first subquadratic $\tilde{O}(n^{2 - 1/d} \cdot \mathrm{polylog}(B))$ time algorithm
-                                    for Attention with large $B$. Our result holds even for matrices with large head dimension if they have low rank. In
+                                    constant \(d = O(1)\), we give the first subquadratic \(\tilde{O}(n^{2 - 1/d} \cdot \mathrm{polylog}(B))\) time algorithm
+                                    for Attention with large \(B\). Our result holds even for matrices with large head dimension if they have low rank. In
                                     this regime, we also give a similar running time for Attention gradient computation, and therefore for the full LLM
                                     training process. Furthermore, we show that any substantial improvement on our algorithm is unlikely. In particular, we
-                                    show that even when $d = 2^{\Theta(\log^* n)}$, Attention requires $n^{2 - o(1)}$ time under $\mathsf{SETH}$.
+                                    show that even when \(d = 2^{\Theta(\log^* n)}\), Attention requires \(n^{2 - o(1)}\) time under \(\mathsf{SETH}\).
                                 </p>
                                 <p>
-                                    Finally, in the regime where $d = \mathrm{poly}(n)$, the standard algorithm requires $O(n^{2} d)$ time while previous
-                                    lower bounds only ruled out algorithms with truly subquadratic time in $n$. We close this gap and show that the standard
-                                    algorithm is optimal under popular fine-grained complexity assumptions.
+                                    Finally, in the regime where \(d = \mathrm{poly}(n)\), the standard algorithm requires \(O(n^{2} d)\) time while previous
+                                    lower bounds only ruled out algorithms with truly subquadratic time in \(n\). We close this gap and show that the standard algorithm is optimal under popular fine-grained complexity assumptions.
                                 </p> 
                             </div>
                         </li>
