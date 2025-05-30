@@ -78,6 +78,45 @@
                     <p>All co-authors are listed in alphabetical order.</p>
                     <ul class="pl">
                         <li>
+                            <b>Subquadratic Algorithms and Hardness for Attention with Any Temperature</b>
+                            <br />
+                            with <a href>Shreya Gupta</a>,
+                            <a href="https://barnasaha.net/" target="_blank">Barna Saha</a>,
+                            <a href="http://xuyinzhan.github.io/" target="_blank">Yinzhan Xu</a>,
+                            and <a href="https://czye17.github.io/" target="_blank">Chris Ye</a>.
+                            <br />
+                            <br />
+                            [<a href="#" onclick="$('#subquadratic-algorithms-and-hardness-for-attention-abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://arxiv.org/abs/2505.14840" target="_blank">arXiv</a>]
+                            <div id="subquadratic-algorithms-and-hardness-for-attention-abstract" class="abstract" style="display:none;">
+                                <p>
+                                    Despite the popularity of the Transformer architecture, the standard algorithm for computing Attention suffers from
+                                    quadratic time complexity in context length $n$. Alman and Song [NeurIPS 2023] showed that when the head dimension $d =
+                                    \Theta(\log n)$, subquadratic Attention is possible if and only if the inputs have small entries bounded by $B =
+                                    o(\sqrt{\log n})$ in absolute values, under the Strong Exponential Time Hypothesis ($\mathsf{SETH}$). Equivalently,
+                                    subquadratic Attention is possible if and only if the softmax is applied with high temperature for $d=\Theta(\log n)$.
+                                    Running times of these algorithms depend exponentially on $B$ and thus they do not lead to even a polynomial-time
+                                    algorithm outside the specific range of $B$.
+                                </p>
+                                <p>
+                                    This naturally leads to the question: when can Attention be computed efficiently without strong assumptions on
+                                    temperature? Are there fast attention algorithms that scale polylogarithmically with entry size $B$? In this work, we
+                                    resolve this question and characterize when fast Attention for arbitrary temperatures is possible. First, for all
+                                    constant $d = O(1)$, we give the first subquadratic $\tilde{O}(n^{2 - 1/d} \cdot \mathrm{polylog}(B))$ time algorithm
+                                    for Attention with large $B$. Our result holds even for matrices with large head dimension if they have low rank. In
+                                    this regime, we also give a similar running time for Attention gradient computation, and therefore for the full LLM
+                                    training process. Furthermore, we show that any substantial improvement on our algorithm is unlikely. In particular, we
+                                    show that even when $d = 2^{\Theta(\log^* n)}$, Attention requires $n^{2 - o(1)}$ time under $\mathsf{SETH}$.
+                                </p>
+                                <p>
+                                    Finally, in the regime where $d = \mathrm{poly}(n)$, the standard algorithm requires $O(n^{2} d)$ time while previous
+                                    lower bounds only ruled out algorithms with truly subquadratic time in $n$. We close this gap and show that the standard
+                                    algorithm is optimal under popular fine-grained complexity assumptions.
+                                </p> 
+                            </div>
+                        </li>
+                        <br>
+                        <li>
                             <b>The Computational Complexity of Factored Graphs</b>
                             <br/>
                             with <a href>Shreya Gupta</a>,
@@ -90,29 +129,36 @@
                             <br/>
                             [<a href="#" onclick="$('#computational-complexity-of-factored-graphs-abstract').toggle();return false;">abstract</a>]
                             [<a href="https://arxiv.org/abs/2407.19102" target="_blank">arXiv</a>]
-                            <div id="computational-complexity-of-factored-graphs-abstract" class="abstract" style="display:none;">
-                                <p>
-                                While graphs and abstract data structures can be large and complex, practical instances are often regular or highly
-                                structured. If the instance has sufficient structure, we might hope to compress the object into a more succinct
-                                representation. An efficient algorithm (with respect to the compressed input size) could then lead to more efficient
-                                computations than algorithms taking the explicit, uncompressed object as input. This leads to a natural question: when
-                                does knowing the input instance has a more succinct representation make computation easier?
-                                </p>
-                                <p>
-                                We initiate the study of the computational complexity of problems on factored graphs: graphs that are given as a formula
-                                of products and unions on smaller graphs. For any graph problem, we define a parameterized version that takes factored
-                                graphs as input, parameterized by the number of (smaller) ordinary graphs used to construct the factored graph.
-                                In this setting, we characterize the parameterized complexity of several natural graph problems, exhibiting a variety of
-                                complexities.
-                                We show that a decision version of lexicographically first maximal independent set is <b>XP</b>-complete, and
-                                therefore <i>unconditionally</i> not fixed-parameter tractable (<b>FPT</b>). On the other hand, we show that clique
-                                counting is <b>FPT</b>. Finally, we show that reachability is <b>XNL</b>-complete. Moreover, <b>XNL</b> is
-                                contained in <b>FPT</b> if and only if <b>NL</b> is contained in some fixed polynomial time.
-                                </p>
-                            </div>
                             [<a href="files/Factored Graphs Presentation.pdf" target="_blank">slides</a>] 
                             [<a href="https://youtu.be/F-FMxNOFOcc" target="_blank">video</a>]
                             [<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITCS.2025.58" target="_blank">ITCS</a>]
+                            <div id="computational-complexity-of-factored-graphs-abstract" class="abstract" style="display:none;">
+                                <p>
+                                    While graphs and abstract data structures can be large and complex, practical instances are often regular or
+                                    highly
+                                    structured. If the instance has sufficient structure, we might hope to compress the object into a more succinct
+                                    representation. An efficient algorithm (with respect to the compressed input size) could then lead to more
+                                    efficient
+                                    computations than algorithms taking the explicit, uncompressed object as input. This leads to a natural
+                                    question: when
+                                    does knowing the input instance has a more succinct representation make computation easier?
+                                </p>
+                                <p>
+                                    We initiate the study of the computational complexity of problems on factored graphs: graphs that are given as a
+                                    formula
+                                    of products and unions on smaller graphs. For any graph problem, we define a parameterized version that takes
+                                    factored
+                                    graphs as input, parameterized by the number of (smaller) ordinary graphs used to construct the factored graph.
+                                    In this setting, we characterize the parameterized complexity of several natural graph problems, exhibiting a
+                                    variety of
+                                    complexities.
+                                    We show that a decision version of lexicographically first maximal independent set is <b>XP</b>-complete, and
+                                    therefore <i>unconditionally</i> not fixed-parameter tractable (<b>FPT</b>). On the other hand, we show that
+                                    clique
+                                    counting is <b>FPT</b>. Finally, we show that reachability is <b>XNL</b>-complete. Moreover, <b>XNL</b> is
+                                    contained in <b>FPT</b> if and only if <b>NL</b> is contained in some fixed polynomial time.
+                                </p>
+                            </div>
                         </li>
                         <br>
                         <li>
@@ -156,7 +202,7 @@
                     <ul>
                     <h4>UCSD</h4>
                         <li>
-                            CSE 101 - Design and Analysis of Algorithms, TA. Winter 2025.
+                            CSE 101 - Design and Analysis of Algorithms, TA. Winter 2025, Spring 2025.
                         </li>
                         <li>
                             CSE 202 - Algorithm Design and Analysis, TA. <a href="https://sites.google.com/view/qipengliu/cse202?authuser=0">Fall 2024</a>.
