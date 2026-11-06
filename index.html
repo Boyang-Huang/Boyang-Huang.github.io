@@ -42,8 +42,12 @@
                 <div class="col-lg-9 col-md-8">
                     <h1>Boyang Huang</h1>
                     <p>
-                        Hi! I am a second-year master's student in the <a href="https://cse.ucsd.edu/" target="_blank">Computer Science & Engineering</a> department at the <a href="https://ucsd.edu/" target="_blank">University of California San Diego</a>, where I'm very fortunate to work with Professor <a href="https://cseweb.ucsd.edu/~russell/" target="_blank">Russell Impagliazzo</a> and <a href="https://barnasaha.net/" target="_blank">Barna Saha</a>. My research interest is in computational complexity theory and algorithm design.
+                        Hi! I am a second-year PhD student in the <a href="https://engineering.yale.edu/academic-study/departments/computer-science" target="_blank">Computer Science</a> department at <a href="https://www.yale.edu/" target="_blank">Yale University</a>, where I'm very fortunate to work with Professors <a href="https://www.cs.yale.edu/homes/spielman/" target="_blank">Daniel Spielman</a> and <a href="https://mzampet.com/" target="_blank">Manolis Zampetakis</a>. 
+                        My research interests lie in algorithm design, optimization, and learning theory. 
                         I'm also broadly interested in theoretical computer science and mathematics.
+                    </p>
+                    <p>
+                        Before coming to Yale, I was a master's student at <a href="https://www.ucsd.edu/" target="_blank">UC San Diego</a> where I received invaluable guidance and mentorship from Professors <a href="https://cseweb.ucsd.edu/~russell/" target="_blank">Russell Impagliazzo</a> and <a href="https://barnasaha.net/" target="_blank">Barna Saha</a>.
                     </p>
                     <p>
                         Prior to UCSD, I received undergraduate degrees in computer science and honors mathematics from the <a
@@ -80,35 +84,34 @@
                         <li>
                             <b>Subquadratic Algorithms and Hardness for Attention with Any Temperature</b>
                             <br />
-                            with <a href>Shreya Gupta</a>,
+                            with <a href="https://sites.google.com/cs.washington.edu/shreyagupta/bio?authuser=0" target="_blank">Shreya Gupta</a>,
                             <a href="https://barnasaha.net/" target="_blank">Barna Saha</a>,
                             <a href="http://xuyinzhan.github.io/" target="_blank">Yinzhan Xu</a>,
                             and <a href="https://czye17.github.io/" target="_blank">Chris Ye</a>.
                             <br />
+                            <a href="https://iclr.cc/Conferences/2026" target="_blank">
+                                <b>The Fourteenth International Conference on Learning Representations (ICLR)</b></a>, 2026.
+                            <br />
                             [<a href="#" onclick="$('#subquadratic-algorithms-and-hardness-for-attention-abstract').toggle();return false;">abstract</a>]
                             [<a href="https://arxiv.org/abs/2505.14840" target="_blank">arXiv</a>]
+                            [<a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/8a01099096c85890b1d1aff3c6b4ea56-Abstract-Conference.html" target="_blank">ICLR</a>]
                             <div id="subquadratic-algorithms-and-hardness-for-attention-abstract" class="abstract" style="display:none;">
                                 <p>
                                     Despite the popularity of the Transformer architecture, the standard algorithm for computing Attention suffers from
-                                    quadratic time complexity in context length \(n\). Alman and Song [NeurIPS 2023] showed that when the head dimension \(d = \Theta(\log n)\), subquadratic Attention is possible if and only if the inputs have small entries bounded by \(B =
-                                    o(\sqrt{\log n})\) in absolute values, under the Strong Exponential Time Hypothesis (\(\mathsf{SETH}\)). Equivalently,
-                                    subquadratic Attention is possible if and only if the softmax is applied with high temperature for \(d=\Theta(\log n)\).
-                                    Running times of these algorithms depend exponentially on \(B\) and thus they do not lead to even a polynomial-time
-                                    algorithm outside the specific range of \(B\).
+                                    quadratic time complexity in context length \(n\). Alman and Song showed that when the head dimension \(d = \Theta(\log
+                                    n)\), subquadratic Attention is possible if and only if the inputs have small entries bounded by \(B = o(\sqrt{\log n})\) in absolute values, under the Strong Exponential Time Hypothesis (\(\mathsf{SETH}\)). Equivalently, subquadratic Attention is possible if and only if the softmax is applied with high temperature for \(d=\Theta(\log n)\). Running times of these algorithms depend exponentially on \(B\) and thus they do not lead to even a polynomial-time algorithm outside the specific range of \(B\).
                                 </p>
                                 <p>
                                     This naturally leads to the question: when can Attention be computed efficiently without strong assumptions on
                                     temperature? Are there fast attention algorithms that scale polylogarithmically with entry size \(B\)? In this work, we
                                     resolve this question and characterize when fast Attention for arbitrary temperatures is possible. First, for all
-                                    constant \(d = O(1)\), we give the first subquadratic \(\tilde{O}(n^{2 - 1/d} \cdot \mathrm{polylog}(B))\) time algorithm
-                                    for Attention with large \(B\). Our result holds even for matrices with large head dimension if they have low rank. In
-                                    this regime, we also give a similar running time for Attention gradient computation, and therefore for the full LLM
+                                    constant \(d = O(1)\), we give the first subquadratic \(\tilde{O}(n^{2 - 1/d} \cdot \mathrm{polylog}(B))\) time algorithm for Attention with large \(B\). Our result holds even for matrices with large head dimension if they have low rank.
+                                    Combined with a reduction from Gradient Computation to Attention, we obtain a subquadratic algorithm for the full LLM
                                     training process. Furthermore, we show that any substantial improvement on our algorithm is unlikely. In particular, we
                                     show that even when \(d = 2^{\Theta(\log^* n)}\), Attention requires \(n^{2 - o(1)}\) time under \(\mathsf{SETH}\).
                                 </p>
                                 <p>
-                                    Finally, in the regime where \(d = \mathrm{poly}(n)\), the standard algorithm requires \(O(n^{2} d)\) time while previous
-                                    lower bounds only ruled out algorithms with truly subquadratic time in \(n\). We close this gap and show that the standard algorithm is optimal under popular fine-grained complexity assumptions.
+                                    Finally, in the regime where \(d = \mathrm{poly}(n)\), the standard algorithm requires \(O(n^{2} d)\) time while previous lower bounds only ruled out algorithms with truly subquadratic time in \(n\). We close this gap and show that the standard algorithm is optimal under popular fine-grained complexity assumptions.
                                 </p> 
                             </div>
                         </li>
@@ -116,7 +119,7 @@
                         <li>
                             <b>The Computational Complexity of Factored Graphs</b>
                             <br/>
-                            with <a href>Shreya Gupta</a>,
+                            with <a href="https://sites.google.com/cs.washington.edu/shreyagupta/bio?authuser=0" target="_blank">Shreya Gupta</a>,
                             <a href="https://cseweb.ucsd.edu/~russell/" target="_blank">Russell Impagliazzo</a>,
                             <a href>Stanley Woo</a>,
                             and <a href="https://czye17.github.io/" target="_blank">Chris Ye</a>.
@@ -161,7 +164,7 @@
                         <li>
                             <b>The Greedy Coin Change Problem</b>
                             <br />
-                            with <a href>Shreya Gupta</a> and
+                            with <a href="https://sites.google.com/cs.washington.edu/shreyagupta/bio?authuser=0" target="_blank">Shreya Gupta</a> and
                             <a href="https://cseweb.ucsd.edu/~russell/" target="_blank">Russell Impagliazzo</a>.
                             <br />
                             [<a href="#"
@@ -243,17 +246,17 @@
                 <div class="row justify-content-center">
                     <div class="col-6 col-md text-left align-self-center">
                         <p class="h5 text-muted">
-                            Last updated: May 30, 2025
+                            Last updated: Nov 2026
                         </p>
                     </div>
-                    <div class="col-6 col-md text-right">
+                    <!--<div class="col-6 col-md text-right">
                         <a href="https://umich.edu/" class="image-link">
                             <img class="mr-4" src="img/umich-logo.png" alt="Univeristy of Michigan logo." height="25">
                         </a>
                         <a href="https://ucsd.edu/" class="image-link">
                             <img src="img/ucsd-logo.png" alt="UC San Diego logo." height="25">
                         </a>
-                    </div>
+                    </div>-->
                 </div>
             </footer>
         </div>
